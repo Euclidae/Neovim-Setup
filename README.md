@@ -4,7 +4,7 @@ This repository contains my configuration for a transparent NvChad setup on Fedo
 
 ## Prerequisites
 
-- Fedora (tested on Fedora [your version])
+- Fedora (tested on Fedora 40)
 - Neovim with NvChad installed
 - A terminal emulator that supports transparency (e.g., Alacritty, Kitty, or GNOME Terminal)
 
