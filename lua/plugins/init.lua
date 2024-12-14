@@ -1,4 +1,23 @@
 return {
+  -- Git integration with lazy.git   
+  {
+        "kdheepak/lazygit.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- Optional: Add keybindings
+        keys = {
+            { "<leader>gg", "<cmd>LazyGit<CR>", desc = "LazyGit" },
+        },
+    },
+
     -- Formatting
     {
         "stevearc/conform.nvim",
@@ -279,57 +298,21 @@ return {
         end,
     },
 
-    {
-        'nvimdev/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            local db = require('dashboard')
-            db.setup({
-                theme = 'doom',
-                config = {
-                    header = {
-                        "$$\\      $$\\  $$$$$$\\  $$\\       $$$$$$$$\\ $$\\    $$\\  $$$$$$\\  $$\\       $$$$$$$$\\ $$\\   $$\\ $$$$$$$$\\        $$$$$$\\  $$\\   $$\\ $$$$$$$\\  $$$$$$\\ $$\\   $$\\ $$$$$$$$\\ ",
-                        "$$$\\    $$$ |$$  __$$\\ $$ |      $$  _____|$$ |   $$ |$$  __$$\\ $$ |      $$  _____|$$$\\  $$ |\\__$$  __|      $$  __$$\\ $$ |  $$ |$$  __$$\\ \\_$$  _|$$$\\  $$ |$$  _____|",
-                        "$$$$\\  $$$$ |$$ /  $$ |$$ |      $$ |      $$ |   $$ |$$ /  $$ |$$ |      $$ |      $$$$\\ $$ |   $$ |         $$ /  \\__|$$ |  $$ |$$ |  $$ |  $$ |  $$$$\\ $$ |$$ |      ",
-                        "$$\\$$\\$$ $$ |$$$$$$$$ |$$ |      $$$$$\\    \\$$\\  $$  |$$ |  $$ |$$ |      $$$$$\\    $$ $$\\$$ |   $$ |         \\$$$$$$\\  $$$$$$$$ |$$$$$$$  |  $$ |  $$ $$\\$$ |$$$$$\\    ",
-                        "$$ \\$$$  $$ |$$  __$$ |$$ |      $$  __|    \\$$\\$$  / $$ |  $$ |$$ |      $$  __|   $$ \\$$$$ |   $$ |          \\____$$\\ $$  __$$ |$$  __$$<   $$ |  $$ \\$$$$ |$$  __|   ",
-                        "$$ |\\$  /$$ |$$ |  $$ |$$ |      $$ |        \\$$$  /  $$ |  $$ |$$ |      $$ |      $$ |\\$$$ |   $$ |         $$\\   $$ |$$ |  $$ |$$ |  $$ |  $$ |  $$ |\\$$$ |$$ |      ",
-                        "$$ | \\_/ $$ |$$ |  $$ |$$$$$$$$\\ $$$$$$$$\\    \\$  /    $$$$$$  |$$$$$$$$\\ $$$$$$$$\\ $$ | \\$$ |   $$ |         \\$$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$\\ $$ | \\$$ |$$$$$$$$\\ ",
-                        "\\__|     \\__|\\__|  \\__|\\________|\\________|    \\_/     \\______/ \\________|\\________|\\__|  \\__|   \\__|          \\______/ \\__|  \\__|\\__|  \\__|\\______|\\__|  \\__|\\________|",
-                        "                                                                                                                                                                        ",
-                        "                                                                                                                                                                        ",
-                        "                                                                                                                                                                        ",
-                    },
-                    center = {
-                        {
-                            icon = '  ',
-                            desc = 'Recently opened files',
-                            action = 'Telescope oldfiles',
-                            shortcut = 'SPC f r'
-                        },
-                        {
-                            icon = '  ',
-                            desc = 'Find file',
-                            action = 'Telescope find_files',
-                            shortcut = 'SPC f f'
-                        },
-                        {
-                            icon = '  ',
-                            desc = 'Find word',
-                            action = 'Telescope live_grep',
-                            shortcut = 'SPC f g'
-                        },
-                        {
-                            icon = '  ',
-                            desc = 'Open private configuration',
-                            action = 'edit ~/.config/nvim/init.lua',
-                            shortcut = 'SPC f p'
-                        },
-                    },
-                    footer = { "The MALEVOLENT SHRINE awaits your command..." }
-                }
-            })
-        end,
-        dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+ {
+        "kdheepak/lazygit.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- Optional: Add keybindings
+        keys = {
+            { "<leader>gg", "<cmd>LazyGit<CR>", desc = "LazyGit" },
+        },
     },
-}
+} 
